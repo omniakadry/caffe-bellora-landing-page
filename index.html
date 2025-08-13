@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffè Bellora - Your Coffee House Since 1992</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Caffè Bellora</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">HOME</a></li>
+                    <li><a href="#about" class="nav-link">ABOUT US</a></li>
+                    <li><a href="#products" class="nav-link">PRODUCTS</a></li>
+                    <li><a href="#location" class="nav-link">LOCATION</a></li>
+                    <li><a href="#contact" class="nav-link">CONTACT US</a></li>
+                </ul>
+                <!-- <div class="nav-icons">
+                    <button class="search-btn">🔍</button>
+                    <button class="cart-btn">🛒</button>
+                </div> -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Caffè Bellora<br>Since 1992</h1>
+            <p class="hero-subtitle">Where Italian tradition meets modern coffee craftsmanship. Every cup tells our
+                story of passion and perfection.</p>
+
+<button class="cta-button" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+    EXPLORE MORE
+</button>
+
+        </div>
+
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">ABOUT US</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-image history-img"></div>
+                    <h3>HISTORY</h3>
+                    <p>Discover our journey from a small Milan café to an international brand.</p>
+                    <a href="#" class="read-more" data-modal="historyModal">READ MORE</a>
+                </div>
+                <div class="about-card">
+                    <div class="card-image farmers-img"></div>
+                    <h3>PARTNER FARMERS</h3>
+                    <p>Meet the dedicated farmers who bring our coffee to life.</p>
+                    <a href="#" class="read-more" data-modal="farmersModal">READ MORE</a>
+                </div>
+                <div class="about-card">
+                    <div class="card-image coffee-img"></div>
+                    <h3>OUR COFFEE</h3>
+                    <p>Learn about our coffee varieties, roasting techniques, and flavors.</p>
+                    <a href="#" class="read-more" data-modal="coffeeModal">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="historyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Our History</h2>
+            <p>
+                Founded in 1992 in Milan, Caffè Bellora began as a family-run café focused on authentic
+                Italian coffee traditions. Over the decades, we have expanded globally, keeping our passion
+                for quality and craftsmanship alive in every cup.
+            </p>
+        </div>
+    </div>
+
+    <div id="farmersModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Our Partner Farmers</h2>
+            <p>
+                We work closely with small, sustainable farms across Latin America, Africa, and Asia.
+                Our farmers are the heart of our coffee — their dedication ensures the highest quality beans.
+            </p>
+        </div>
+    </div>
+
+    <div id="coffeeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Our Coffee</h2>
+            <p>
+                From bold espresso to delicate cappuccinos, our coffee is crafted using traditional
+                Italian roasting methods, ensuring rich flavor and aromatic depth in every sip.
+            </p>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">☕</div>
+                    <h3>AWESOME AROMA</h3>
+                    <p>Experience the rich and irresistible coffee aroma that awakens your senses.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌱</div>
+                    <h3>100% ORGANIC</h3>
+                    <p>Freshly sourced organic beans, ensuring health and pure taste in every sip.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔥</div>
+                    <h3>PROPER ROASTING</h3>
+                    <p>Perfectly roasted to bring out the natural flavors and aroma of coffee.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🏆</div>
+                    <h3>HIGH QUALITY</h3>
+                    <p>Top-quality beans carefully selected for the finest coffee experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">PRODUCTS</h2>
+            <p class="section-subtitle">LIFE IS SHORT. DRINK GOOD COFFEE.</p>
+
+            <div class="products-carousel">
+                <button class="carousel-btn prev-btn">‹</button>
+                <div class="products-container">
+                    <div class="product-item">
+                        <div class="product-image coffee-bag"></div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image coffee-cup-black"></div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-image coffeeset"></div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image coffee-beans-bag"></div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image coffeegrinder"></div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image coffee-grinder"></div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image coffee--grinder"></div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image coffee-set"></div>
+                    </div>
+
+
+
+
+                </div>
+                <button class="carousel-btn next-btn">›</button>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <button class="cta-button">SEE ALL PRODUCTS</button>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="section-title">OUR LOCATION</h2>
+            <div class="location-content">
+                <div class="location-images">
+                    <div class="location-grid">
+                        <div class="location-img location-1"></div>
+                        <div class="location-img location-2"></div>
+                        <div class="location-img location-3"></div>
+                        <div class="location-img location-4"></div>
+                    </div>
+                </div>
+                <div class="location-text">
+                    <div class="quote-mark">"</div>
+                    <p>Barrity is not your regular coffee shop. A cup of coffee with someone special is good any time,
+                        any place, any season.</p>
+                    <button class="cta-button branches-btn"
+                        onclick="window.open('https://www.google.com/maps/search/Caffè+Bellora', '_blank')">
+                        EXPLORE ALL BRANCHES
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">CONTACT US</h2>
+            <p class="section-subtitle">FEEL FREE TO LEAVE US A COMMENT</p>
+
+            <form class="contact-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Name" class="form-input" required>
+                    <input type="email" placeholder="Email" class="form-input" required>
+                </div>
+                <textarea placeholder="Message" class="form-textarea" required></textarea>
+                <button type="submit" class="cta-button">SEND MESSAGE</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Caffè Bellora</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>SUPPORT</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Help and Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>CONTACT</h4>
+                    <ul>
+                        <li>📍 4517 Coffee St. San Jose,<br>&nbsp;&nbsp;&nbsp;&nbsp;Costa Rica</li>
+                        <li>📞 8847-15-2345</li>
+                        <li>✉️ Caffè-Bellora@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Caffè-Bellora@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
