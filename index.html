@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caffè Bellora - Your Coffee House Since 1992</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
     <!-- Header -->
     <header class="header">
@@ -36,6 +30,7 @@
                 </div>
             </div>
         </nav>
+        <div class="menu-overlay"></div>
     </header>
 
     <!-- Hero Section -->
@@ -44,16 +39,20 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <h1 class="hero-title">Caffè Bellora<br>Since 1992</h1>
-            <p class="hero-subtitle">Where Italian tradition meets modern coffee craftsmanship. Every cup tells our
-                story of passion and perfection.</p>
-
-            <button class="cta-button" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
-                EXPLORE MORE
-            </button>
-
+            <div class="container">
+                <h1 class="hero-title">
+                    Caffè Bellora<br>
+                    <span class="hero-subtitle-text">Since 1992</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Where Italian tradition meets modern coffee craftsmanship. Every cup tells our
+                    story of passion and perfection.
+                </p>
+                <button class="cta-button explore-btn">
+                    EXPLORE MORE
+                </button>
+            </div>
         </div>
-
     </section>
 
     <!-- About Section -->
@@ -65,55 +64,30 @@
                     <div class="card-image history-img"></div>
                     <h3>HISTORY</h3>
                     <p>Discover our journey from a small Milan café to an international brand.</p>
-                    <a href="#" class="read-more" data-modal="historyModal">READ MORE</a>
+                    <button class="read-more" data-modal="history">READ MORE</button>
                 </div>
                 <div class="about-card">
                     <div class="card-image farmers-img"></div>
                     <h3>PARTNER FARMERS</h3>
                     <p>Meet the dedicated farmers who bring our coffee to life.</p>
-                    <a href="#" class="read-more" data-modal="farmersModal">READ MORE</a>
+                    <button class="read-more" data-modal="farmers">READ MORE</button>
                 </div>
                 <div class="about-card">
                     <div class="card-image coffee-img"></div>
                     <h3>OUR COFFEE</h3>
                     <p>Learn about our coffee varieties, roasting techniques, and flavors.</p>
-                    <a href="#" class="read-more" data-modal="coffeeModal">READ MORE</a>
+                    <button class="read-more" data-modal="coffee">READ MORE</button>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Modals -->
-    <div id="historyModal" class="modal">
+    <div class="modal" id="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Our History</h2>
-            <p>
-                Founded in 1992 in Milan, Caffè Bellora began as a family-run café focused on authentic
-                Italian coffee traditions. Over the decades, we have expanded globally, keeping our passion
-                for quality and craftsmanship alive in every cup.
-            </p>
-        </div>
-    </div>
-
-    <div id="farmersModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Our Partner Farmers</h2>
-            <p>
-                We work closely with small, sustainable farms across Latin America, Africa, and Asia.
-                Our farmers are the heart of our coffee — their dedication ensures the highest quality beans.
-            </p>
-        </div>
-    </div>
-
-    <div id="coffeeModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Our Coffee</h2>
-            <p>
-                From bold espresso to delicate cappuccinos, our coffee is crafted using traditional
-                Italian roasting methods, ensuring rich flavor and aromatic depth in every sip.
-            </p>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
         </div>
     </div>
 
@@ -122,29 +96,36 @@
         <div class="container">
             <div class="features-grid">
                 <div class="feature-item">
-                    <div class="feature-icon">☕</div>
+                    <div class="feature-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
                     <h3>AWESOME AROMA</h3>
                     <p>Experience the rich and irresistible coffee aroma that awakens your senses.</p>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">🌱</div>
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
                     <h3>100% ORGANIC</h3>
                     <p>Freshly sourced organic beans, ensuring health and pure taste in every sip.</p>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">🔥</div>
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
                     <h3>PROPER ROASTING</h3>
                     <p>Perfectly roasted to bring out the natural flavors and aroma of coffee.</p>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">🏆</div>
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
                     <h3>HIGH QUALITY</h3>
                     <p>Top-quality beans carefully selected for the finest coffee experience.</p>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Products Section -->
     <section id="products" class="products">
@@ -153,51 +134,85 @@
             <p class="section-subtitle">LIFE IS SHORT. DRINK GOOD COFFEE.</p>
 
             <div class="products-carousel">
-                <button class="carousel-btn prev-btn">‹</button>
-                <div class="products-container">
-                    <div class="product-item">
-                        <div class="product-image coffee-bag"></div>
+                <button class="carousel-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-container">
+                    <div class="products-track">
+                        <div class="product-item">
+                            <div class="product-image-container">
+                                <img src="https://i.pinimg.com/1200x/c3/63/b8/c363b88f36f31843912e9875b84bd4a7.jpg" alt="Premium Coffee Bags" class="product-image">
+                                <div class="product-overlay">
+                                    <h4 class="product-title">Premium Coffee Bags</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-container">
+                                <img src="https://i.pinimg.com/736x/3e/5f/c5/3e5fc516930a525af2483bface2a7519.jpg" alt="Artisan Coffee Cups" class="product-image">
+                                <div class="product-overlay">
+                                    <h4 class="product-title">Artisan Coffee Cups</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-container">
+                                <img src="https://i.pinimg.com/736x/d9/b2/0d/d9b20df0707ac00105fac3f446693372.jpg" alt="Coffee Grinder" class="product-image">
+                                <div class="product-overlay">
+                                    <h4 class="product-title">Coffee Grinder</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-container">
+                                <img src="https://i.pinimg.com/736x/e6/16/48/e616481ce6bb60ae2594caef4a315cac.jpg" alt="Coffee Set Collection" class="product-image">
+                                <div class="product-overlay">
+                                    <h4 class="product-title">Coffee Set Collection</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-container">
+                                <img src="https://i.pinimg.com/1200x/5a/00/d4/5a00d434ecf519c091765d0ffb732494.jpg" alt="Espresso Maker" class="product-image">
+                                <div class="product-overlay">
+                                    <h4 class="product-title">Espresso Maker</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-container">
+                                <img src="https://i.pinimg.com/1200x/f1/4e/70/f14e7007806beed9f34ff9cf733e5e52.jpg" alt="Bean Collection" class="product-image">
+                                <div class="product-overlay">
+                                    <h4 class="product-title">Bean Collection</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-container">
+                                <img src="https://i.pinimg.com/736x/04/ed/75/04ed7551399260cbe69111dee0513bdd.jpg" alt="Professional Grinder" class="product-image">
+                                <div class="product-overlay">
+                                    <h4 class="product-title">Professional Grinder</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image-container">
+                                <img src="https://i.pinimg.com/736x/cc/dc/69/ccdc69416eefdf1204bc2fd228645f22.jpg" alt="Barista Tools" class="product-image">
+                                <div class="product-overlay">
+                                    <h4 class="product-title">Barista Tools</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-item">
-                        <div class="product-image coffee-cup-black"></div>
-                    </div>
-                                        <div class="product-item">
-                        <div class="product-image coffee-grinder"></div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image coffee-set"></div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image coffeeset"></div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image coffee-beans-bag"></div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image coffeegrinder"></div>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="product-image coffee--grinder"></div>
-                    </div>
-
-
-
-
-
                 </div>
-                <button class="carousel-btn next-btn">›</button>
+
+                <button class="carousel-btn next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
 
-            <div class="carousel-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+            <div class="carousel-dots"></div>
 
             <button class="cta-button">SEE ALL PRODUCTS</button>
         </div>
@@ -218,11 +233,12 @@
                 </div>
                 <div class="location-text">
                     <div class="quote-mark">"</div>
-                    <p>Caffè Bellora is not your regular coffee shop. A cup of coffee with someone special is good any
-                        time,
-                        any place, any season.</p>
-                    <button class="cta-button branches-btn"
-                        onclick="window.open('https://www.google.com/maps/search/Caffè+Bellora', '_blank')">
+                    <p>
+                        Caffè Bellora is not your regular coffee shop. A cup of coffee with someone special 
+                        is good any time, any place, any season.
+                    </p>
+                    <button class="cta-button branches-btn">
+                        <i class="fas fa-map-marker-alt"></i>
                         EXPLORE ALL BRANCHES
                     </button>
                 </div>
@@ -238,11 +254,14 @@
 
             <form class="contact-form">
                 <div class="form-row">
-                    <input type="text" placeholder="Name" class="form-input" required>
-                    <input type="email" placeholder="Email" class="form-input" required>
+                    <input type="text" name="name" placeholder="Name" class="form-input" required>
+                    <input type="email" name="email" placeholder="Email" class="form-input" required>
                 </div>
-                <textarea placeholder="Message" class="form-textarea" required></textarea>
-                <button type="submit" class="cta-button">SEND MESSAGE</button>
+                <textarea name="message" placeholder="Message" class="form-textarea" required></textarea>
+                <button type="submit" class="cta-button">
+                    <i class="fas fa-paper-plane"></i>
+                    SEND MESSAGE
+                </button>
             </form>
         </div>
     </section>
@@ -255,15 +274,12 @@
                     <h3>Caffè Bellora</h3>
                     <p>Welcome to Caffè Bellora, where every cup tells a story. We craft our coffee from the finest
                         beans, roasted to perfection, bringing you a rich and aromatic experience in every sip.</p>
-
                     <div class="social-links">
                         <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-
                     </div>
                 </div>
-
                 <div class="footer-section">
                     <h4>SUPPORT</h4>
                     <ul>
@@ -272,26 +288,21 @@
                         <li><a href="#">Help and Support</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-section">
                     <h4>CONTACT</h4>
                     <ul>
-                        <li>📍 4517 Coffee St. San Jose,<br>&nbsp;&nbsp;&nbsp;&nbsp;Costa Rica</li>
-                        <li>📞 8847-15-2345</li>
-                        <li>✉️ Caffè-Bellora@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 4517 Coffee St. San Jose,<br>&nbsp;&nbsp;&nbsp;&nbsp;Costa Rica</li>
+                        <li><i class="fas fa-phone"></i> 8847-15-2345</li>
+                        <li><i class="fas fa-envelope"></i> Caffe-Bellora@gmail.com</li>
                     </ul>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>Caffè-Bellora@gmail.com</p>
+                <p>&copy; 2024 Caffè Bellora. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
-
 </html>
