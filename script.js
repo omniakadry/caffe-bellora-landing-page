@@ -50,16 +50,6 @@ const aboutBtn = document.getElementById("aboutBtn");
 const aboutModal = document.getElementById("aboutModal");
 const closeBtn = document.querySelector(".close");
 
-// Show modal
-aboutBtn.onclick = () => {
-    aboutModal.style.display = "block";
-};
-
-// Hide modal when close button clicked
-closeBtn.onclick = () => {
-    aboutModal.style.display = "none";
-};
-
 // Hide modal when clicking outside content
 window.onclick = (event) => {
     if (event.target === aboutModal) {
@@ -96,40 +86,42 @@ window.addEventListener("click", (e) => {
     });
 });
 
+
 // Products carousel functionality
 const productsContainer = document.querySelector('.products-container');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const dots = document.querySelectorAll('.dot');
 
+const productItems = document.querySelectorAll('.product-item');
 let currentSlide = 0;
-const totalSlides = 8;
-const slideWidth = 150;
+const totalSlides = productItems.length;
+const slideWidth = productItems[0].offsetWidth + 16; // عرض + المسافة بين العناصر
 
-// Initialize carousel
 function updateCarousel() {
-    const translateX = -currentSlide * slideWidth;
-    productsContainer.style.transform = `translateX(${translateX}px)`;
-    
-    // Update dots
+    productsContainer.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+
+    // تحديث النقاط
     dots.forEach((dot, index) => {
         dot.classList.toggle('active', index === currentSlide);
     });
 }
 
-// Next slide
 nextBtn.addEventListener('click', () => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateCarousel();
+    if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateCarousel();
+    }
 });
 
-// Previous slide
 prevBtn.addEventListener('click', () => {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateCarousel();
+    if (currentSlide > 0) {
+        currentSlide--;
+        updateCarousel();
+    }
 });
 
-// Dot navigation
+// التنقل بالنقاط
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
         currentSlide = index;
@@ -137,13 +129,13 @@ dots.forEach((dot, index) => {
     });
 });
 
-// Auto-slide functionality
+// Auto slide
 let autoSlideInterval = setInterval(() => {
     currentSlide = (currentSlide + 1) % totalSlides;
     updateCarousel();
 }, 5000);
 
-// Pause auto-slide on hover
+// إيقاف التشغيل التلقائي عند المرور
 document.querySelector('.products-carousel').addEventListener('mouseenter', () => {
     clearInterval(autoSlideInterval);
 });
@@ -154,6 +146,9 @@ document.querySelector('.products-carousel').addEventListener('mouseleave', () =
         updateCarousel();
     }, 5000);
 });
+
+// تشغيل أول تحديث
+updateCarousel();
 
 // Contact form handling
 const contactForm = document.querySelector('.contact-form');
